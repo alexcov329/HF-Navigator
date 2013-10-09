@@ -1,18 +1,18 @@
 //
-//  Daily Announcements.m
+//  DailyAnnouncements.m
 //  HF Navigator
 //
-//  Created by Harborfields Mobile Computing Club on 9/23/13.
+//  Created by Harborfields Mobile Computing Club on 10/9/13.
 //  Copyright (c) 2013 Coventry Developments. All rights reserved.
 //
 
-#import "Daily Announcements.h"
+#import "DailyAnnouncements.h"
 
-@interface Daily_Announcements ()
+@interface DailyAnnouncements ()
 
 @end
 
-@implementation Daily_Announcements
+@implementation DailyAnnouncements
 @synthesize webView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

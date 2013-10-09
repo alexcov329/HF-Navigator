@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13A598" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="zWj-PE-8Ci">
     <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
         <!--Bus Finder-->
         <scene sceneID="peB-z9-uDf">
             <objects>
-                <viewController id="ets-Fc-YGz" customClass="Bus_Finder" sceneMemberID="viewController">
+                <viewController id="ets-Fc-YGz" customClass="BusFinder" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bB6-vO-xmB"/>
                         <viewControllerLayoutGuide type="bottom" id="u7u-HK-qdx"/>
@@ -56,7 +57,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="webView" destination="VGC-Kj-DxZ" id="R9U-Eb-KYH"/>
+                        <outlet property="webView" destination="VGC-Kj-DxZ" id="Jco-us-ZGd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KN7-iz-UdC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -85,7 +86,7 @@
         <!--Daily Announcements - Daily Announcements-->
         <scene sceneID="5s8-CD-d9m">
             <objects>
-                <viewController id="VYs-XF-sTe" customClass="Daily_Announcements" sceneMemberID="viewController">
+                <viewController id="VYs-XF-sTe" customClass="DailyAnnouncements" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jsu-vn-hye"/>
                         <viewControllerLayoutGuide type="bottom" id="9L6-6q-Zdb"/>
@@ -137,7 +138,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Daily Announcements" image="speaker-electric.png" id="gMA-Hq-Mh2"/>
                     <connections>
-                        <outlet property="webView" destination="9YA-R3-FsS" id="Bs6-Yu-quo"/>
+                        <outlet property="webView" destination="9YA-R3-FsS" id="Gkv-bh-3mU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hNL-VK-qOL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1140,6 +1141,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="FrX-oj-745"/>
+        <segue reference="TNT-gd-UJl"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -19,7 +19,6 @@
 		131B8C8F17F0FD1000B69845 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 131B8C8E17F0FD1000B69845 /* SystemConfiguration.framework */; };
 		131B8C9217F1021700B69845 /* Harbinger_Twitter_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 131B8C9017F1021700B69845 /* Harbinger_Twitter_Icon.png */; };
 		131B8C9317F1021700B69845 /* HF Navigator V3.0 HomeScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 131B8C9117F1021700B69845 /* HF Navigator V3.0 HomeScreen.png */; };
-		131B8C9617F1032900B69845 /* Bus Finder.m in Sources */ = {isa = PBXBuildFile; fileRef = 131B8C9517F1032900B69845 /* Bus Finder.m */; };
 		131B8C9817F10D9A00B69845 /* mask-tornado-hi.png in Resources */ = {isa = PBXBuildFile; fileRef = 131B8C9717F10D9A00B69845 /* mask-tornado-hi.png */; };
 		131B8C9C17F1145400B69845 /* arrow-big-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 131B8C9917F1145400B69845 /* arrow-big-01.png */; };
 		131B8C9D17F1145400B69845 /* arrow-big-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 131B8C9A17F1145400B69845 /* arrow-big-02.png */; };
@@ -31,13 +30,14 @@
 		132C9DB317FF69E400EB11D8 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 132C9DB217FF69E400EB11D8 /* Person.m */; };
 		132C9DB617FFB46E00EB11D8 /* PersonDetailControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 132C9DB517FFB46E00EB11D8 /* PersonDetailControllerViewController.m */; };
 		133D2E3117F932F2002BD3A0 /* Main-iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 133D2E3017F932F2002BD3A0 /* Main-iPad.storyboard */; };
-		1345190417F129F6000EA0F0 /* Daily Announcements.m in Sources */ = {isa = PBXBuildFile; fileRef = 1345190317F129F6000EA0F0 /* Daily Announcements.m */; };
 		134A4E2B17F1F6E400D88AD2 /* parentportal.m in Sources */ = {isa = PBXBuildFile; fileRef = 134A4E2A17F1F6E400D88AD2 /* parentportal.m */; };
 		134A4E2E17F1F6FE00D88AD2 /* castle learning.m in Sources */ = {isa = PBXBuildFile; fileRef = 134A4E2D17F1F6FE00D88AD2 /* castle learning.m */; };
 		134A4E3117F1F73600D88AD2 /* edmodo.m in Sources */ = {isa = PBXBuildFile; fileRef = 134A4E3017F1F73600D88AD2 /* edmodo.m */; };
 		136D77CD17F1C4900074FB40 /* HF Navigator v3 120.png in Resources */ = {isa = PBXBuildFile; fileRef = 136D77CC17F1C4900074FB40 /* HF Navigator v3 120.png */; };
 		136D77D017F1D91B0074FB40 /* 2hourdelaybellschedule.png in Resources */ = {isa = PBXBuildFile; fileRef = 136D77CE17F1D91B0074FB40 /* 2hourdelaybellschedule.png */; };
 		136D77D117F1D91B0074FB40 /* regulardaybellschedule.png in Resources */ = {isa = PBXBuildFile; fileRef = 136D77CF17F1D91B0074FB40 /* regulardaybellschedule.png */; };
+		13756BE41806214D0006D759 /* BusFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756BE31806214D0006D759 /* BusFinder.m */; };
+		13756BE7180622350006D759 /* DailyAnnouncements.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756BE6180622350006D759 /* DailyAnnouncements.m */; };
 		1375A62617F52ABE007331FB /* speaker-electric.png in Resources */ = {isa = PBXBuildFile; fileRef = 1375A62417F52ABE007331FB /* speaker-electric.png */; };
 		1375A62717F52ABE007331FB /* text-left.png in Resources */ = {isa = PBXBuildFile; fileRef = 1375A62517F52ABE007331FB /* text-left.png */; };
 		13909AF817F0FB5F00FAEF9C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13909AF717F0FB5F00FAEF9C /* Foundation.framework */; };
@@ -54,7 +54,6 @@
 		13909B2117F0FB5F00FAEF9C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 13909B1F17F0FB5F00FAEF9C /* InfoPlist.strings */; };
 		13909B2317F0FB5F00FAEF9C /* HF_NavigatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 13909B2217F0FB5F00FAEF9C /* HF_NavigatorTests.m */; };
 		139595A017F11EC80051484C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1395959F17F11EC80051484C /* Main.storyboard */; };
-		13CDE10E17F72F570082BEFC /* PersonalSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 13CDE10D17F72F570082BEFC /* PersonalSettings.m */; };
 		13CDE11117F759090082BEFC /* Agenda.m in Sources */ = {isa = PBXBuildFile; fileRef = 13CDE11017F759090082BEFC /* Agenda.m */; };
 		13E79FA417F6240300B5612E /* icon58.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E79FA117F6240300B5612E /* icon58.png */; };
 		13E79FA517F6240300B5612E /* icon80.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E79FA217F6240300B5612E /* icon80.png */; };
@@ -100,8 +99,6 @@
 		131B8C8E17F0FD1000B69845 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		131B8C9017F1021700B69845 /* Harbinger_Twitter_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Harbinger_Twitter_Icon.png; path = images/Harbinger_Twitter_Icon.png; sourceTree = "<group>"; };
 		131B8C9117F1021700B69845 /* HF Navigator V3.0 HomeScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "HF Navigator V3.0 HomeScreen.png"; path = "images/HF Navigator V3.0 HomeScreen.png"; sourceTree = "<group>"; };
-		131B8C9417F1032900B69845 /* Bus Finder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Bus Finder.h"; path = "../Bus Finder.h"; sourceTree = "<group>"; };
-		131B8C9517F1032900B69845 /* Bus Finder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Bus Finder.m"; path = "../Bus Finder.m"; sourceTree = "<group>"; };
 		131B8C9717F10D9A00B69845 /* mask-tornado-hi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mask-tornado-hi.png"; path = "../../../Downloads/mask-tornado-hi.png"; sourceTree = "<group>"; };
 		131B8C9917F1145400B69845 /* arrow-big-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrow-big-01.png"; path = "images/arrow-big-01.png"; sourceTree = "<group>"; };
 		131B8C9A17F1145400B69845 /* arrow-big-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrow-big-02.png"; path = "images/arrow-big-02.png"; sourceTree = "<group>"; };
@@ -116,8 +113,6 @@
 		132C9DB417FFB46E00EB11D8 /* PersonDetailControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonDetailControllerViewController.h; sourceTree = "<group>"; };
 		132C9DB517FFB46E00EB11D8 /* PersonDetailControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonDetailControllerViewController.m; sourceTree = "<group>"; };
 		133D2E3017F932F2002BD3A0 /* Main-iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Main-iPad.storyboard"; path = "../Main-iPad.storyboard"; sourceTree = "<group>"; };
-		1345190217F129F6000EA0F0 /* Daily Announcements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Daily Announcements.h"; sourceTree = "<group>"; };
-		1345190317F129F6000EA0F0 /* Daily Announcements.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Daily Announcements.m"; sourceTree = "<group>"; };
 		134A4E2917F1F6E400D88AD2 /* parentportal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parentportal.h; sourceTree = "<group>"; };
 		134A4E2A17F1F6E400D88AD2 /* parentportal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = parentportal.m; sourceTree = "<group>"; };
 		134A4E2C17F1F6FE00D88AD2 /* castle learning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "castle learning.h"; sourceTree = "<group>"; };
@@ -127,6 +122,10 @@
 		136D77CC17F1C4900074FB40 /* HF Navigator v3 120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HF Navigator v3 120.png"; sourceTree = "<group>"; };
 		136D77CE17F1D91B0074FB40 /* 2hourdelaybellschedule.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 2hourdelaybellschedule.png; path = images/2hourdelaybellschedule.png; sourceTree = "<group>"; };
 		136D77CF17F1D91B0074FB40 /* regulardaybellschedule.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = regulardaybellschedule.png; path = images/regulardaybellschedule.png; sourceTree = "<group>"; };
+		13756BE21806214D0006D759 /* BusFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusFinder.h; sourceTree = "<group>"; };
+		13756BE31806214D0006D759 /* BusFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusFinder.m; sourceTree = "<group>"; };
+		13756BE5180622350006D759 /* DailyAnnouncements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DailyAnnouncements.h; path = ../DailyAnnouncements.h; sourceTree = "<group>"; };
+		13756BE6180622350006D759 /* DailyAnnouncements.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DailyAnnouncements.m; path = ../DailyAnnouncements.m; sourceTree = "<group>"; };
 		1375A62417F52ABE007331FB /* speaker-electric.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "speaker-electric.png"; path = "images/speaker-electric.png"; sourceTree = "<group>"; };
 		1375A62517F52ABE007331FB /* text-left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "text-left.png"; path = "images/text-left.png"; sourceTree = "<group>"; };
 		13909AF417F0FB5F00FAEF9C /* HF Navigator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HF Navigator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,8 +147,6 @@
 		13909B2017F0FB5F00FAEF9C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		13909B2217F0FB5F00FAEF9C /* HF_NavigatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HF_NavigatorTests.m; sourceTree = "<group>"; };
 		1395959F17F11EC80051484C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
-		13CDE10C17F72F570082BEFC /* PersonalSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalSettings.h; sourceTree = "<group>"; };
-		13CDE10D17F72F570082BEFC /* PersonalSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalSettings.m; sourceTree = "<group>"; };
 		13CDE10F17F759090082BEFC /* Agenda.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Agenda.h; sourceTree = "<group>"; };
 		13CDE11017F759090082BEFC /* Agenda.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Agenda.m; sourceTree = "<group>"; };
 		13E79FA117F6240300B5612E /* icon58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon58.png; sourceTree = "<group>"; };
@@ -260,18 +257,18 @@
 		13909AFD17F0FB5F00FAEF9C /* HF Navigator */ = {
 			isa = PBXGroup;
 			children = (
-				131B8C9417F1032900B69845 /* Bus Finder.h */,
-				131B8C9517F1032900B69845 /* Bus Finder.m */,
 				1395959F17F11EC80051484C /* Main.storyboard */,
 				133D2E3017F932F2002BD3A0 /* Main-iPad.storyboard */,
+				13756BE5180622350006D759 /* DailyAnnouncements.h */,
+				13756BE6180622350006D759 /* DailyAnnouncements.m */,
 				132C9DB417FFB46E00EB11D8 /* PersonDetailControllerViewController.h */,
 				132C9DB517FFB46E00EB11D8 /* PersonDetailControllerViewController.m */,
+				13756BE21806214D0006D759 /* BusFinder.h */,
+				13756BE31806214D0006D759 /* BusFinder.m */,
 				132C9DB117FF69E400EB11D8 /* Person.h */,
 				132C9DB217FF69E400EB11D8 /* Person.m */,
 				132C9DAB17FF5E1500EB11D8 /* TeacherDirectory.h */,
 				132C9DAC17FF5E1500EB11D8 /* TeacherDirectory.m */,
-				13CDE10C17F72F570082BEFC /* PersonalSettings.h */,
-				13CDE10D17F72F570082BEFC /* PersonalSettings.m */,
 				13CDE10F17F759090082BEFC /* Agenda.h */,
 				13CDE11017F759090082BEFC /* Agenda.m */,
 				13E79FAA17F68D9A00B5612E /* Notifications.h */,
@@ -292,8 +289,6 @@
 				134A4E2D17F1F6FE00D88AD2 /* castle learning.m */,
 				134A4E2917F1F6E400D88AD2 /* parentportal.h */,
 				134A4E2A17F1F6E400D88AD2 /* parentportal.m */,
-				1345190217F129F6000EA0F0 /* Daily Announcements.h */,
-				1345190317F129F6000EA0F0 /* Daily Announcements.m */,
 				13909B0617F0FB5F00FAEF9C /* navigatorAppDelegate.h */,
 				13909B0717F0FB5F00FAEF9C /* navigatorAppDelegate.m */,
 				13909B0C17F0FB5F00FAEF9C /* navigatorViewController.h */,
@@ -484,8 +479,8 @@
 			files = (
 				134A4E2E17F1F6FE00D88AD2 /* castle learning.m in Sources */,
 				13E79FAC17F68D9A00B5612E /* Notifications.m in Sources */,
-				13CDE10E17F72F570082BEFC /* PersonalSettings.m in Sources */,
 				132C9DAD17FF5E1500EB11D8 /* TeacherDirectory.m in Sources */,
+				13756BE41806214D0006D759 /* BusFinder.m in Sources */,
 				13E8B2DD17F39AD700692676 /* RegentsSchedule.m in Sources */,
 				134A4E2B17F1F6E400D88AD2 /* parentportal.m in Sources */,
 				132C9DB317FF69E400EB11D8 /* Person.m in Sources */,
@@ -493,13 +488,12 @@
 				13E8B2DA17F39A9100692676 /* MidtermsSchedule.m in Sources */,
 				13CDE11117F759090082BEFC /* Agenda.m in Sources */,
 				13909B0E17F0FB5F00FAEF9C /* navigatorViewController.m in Sources */,
-				131B8C9617F1032900B69845 /* Bus Finder.m in Sources */,
 				13E8B2D417F36D2700692676 /* springsports.m in Sources */,
 				13909B0817F0FB5F00FAEF9C /* navigatorAppDelegate.m in Sources */,
+				13756BE7180622350006D759 /* DailyAnnouncements.m in Sources */,
 				13909B0417F0FB5F00FAEF9C /* main.m in Sources */,
 				13E8B2B517F27A8A00692676 /* library.m in Sources */,
 				13E8B2D717F39A7500692676 /* DistrictCalendar.m in Sources */,
-				1345190417F129F6000EA0F0 /* Daily Announcements.m in Sources */,
 				134A4E3117F1F73600D88AD2 /* edmodo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -627,7 +621,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HF Navigator/HF Navigator-Prefix.pch";
 				INFOPLIST_FILE = "HF Navigator/HF Navigator-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -647,7 +641,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HF Navigator/HF Navigator-Prefix.pch";
 				INFOPLIST_FILE = "HF Navigator/HF Navigator-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;

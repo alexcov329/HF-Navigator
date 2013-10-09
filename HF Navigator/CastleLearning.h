@@ -1,18 +1,17 @@
 //
-//  castle learning.h
+//  CastleLearning.h
 //  HF Navigator
 //
-//  Created by Harborfields Mobile Computing Club on 9/24/13.
+//  Created by Harborfields Mobile Computing Club on 10/9/13.
 //  Copyright (c) 2013 Coventry Developments. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface castle_learning : UIViewController{
+@interface CastleLearning : UIViewController{
     IBOutlet UIWebView *webView;
 }
 
 @property (nonatomic, retain) IBOutlet UIWebView *webView;
-
 
 @end

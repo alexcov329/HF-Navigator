@@ -1,12 +1,1145 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4443" systemVersion="13A451" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13A598" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="zWj-PE-8Ci">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3666"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Bus Finder-->
+        <scene sceneID="peB-z9-uDf">
+            <objects>
+                <viewController id="ets-Fc-YGz" customClass="Bus_Finder" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bB6-vO-xmB"/>
+                        <viewControllerLayoutGuide type="bottom" id="u7u-HK-qdx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dTW-LD-LTE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VGC-Kj-DxZ">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pgg-Sx-rbD">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem image="home.png" id="W6U-cL-GI6">
+                                        <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="zWj-PE-8Ci" kind="modal" modalTransitionStyle="crossDissolve" id="6lg-UV-fNG"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ic2-K4-RdP"/>
+                                    <barButtonItem image="01-refresh.png" id="Dpn-Cf-wCp">
+                                        <connections>
+                                            <action selector="reload" destination="VGC-Kj-DxZ" id="xlz-La-rbt"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Qds-00-mFF"/>
+                                    <barButtonItem image="arrow-big-01.png" id="PvP-9C-Qbo">
+                                        <connections>
+                                            <action selector="goBack" destination="VGC-Kj-DxZ" id="ywb-aX-sBq"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="0jt-Jr-phW"/>
+                                    <barButtonItem image="arrow-big-02.png" id="QeG-9c-WVa">
+                                        <connections>
+                                            <action selector="goForward" destination="VGC-Kj-DxZ" id="Y9y-a6-97E"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="VGC-Kj-DxZ" id="R9U-Eb-KYH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KN7-iz-UdC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3112" y="-314"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="K98-gd-hs4">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="oZ8-z4-Awq" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="EA9-cE-LeA">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="X9j-NT-R5V" kind="relationship" relationship="viewControllers" id="LWD-My-sfE"/>
+                        <segue destination="VYs-XF-sTe" kind="relationship" relationship="viewControllers" id="Dci-5P-Gdz"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uPc-5w-53T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3851" y="2173"/>
+        </scene>
+        <!--Daily Announcements - Daily Announcements-->
+        <scene sceneID="5s8-CD-d9m">
+            <objects>
+                <viewController id="VYs-XF-sTe" customClass="Daily_Announcements" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jsu-vn-hye"/>
+                        <viewControllerLayoutGuide type="bottom" id="9L6-6q-Zdb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="liv-kI-ij5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9YA-R3-FsS">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a1i-pS-ju4">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem image="home.png" id="jlN-0y-kEK">
+                                        <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="zWj-PE-8Ci" kind="modal" modalTransitionStyle="crossDissolve" id="TNT-gd-UJl"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="HIE-eo-RCm"/>
+                                    <barButtonItem image="01-refresh.png" id="MTk-JN-SOW">
+                                        <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="reload" destination="9YA-R3-FsS" id="F8n-63-DnD"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="16K-lw-WDg"/>
+                                    <barButtonItem image="arrow-big-01.png" id="542-qT-1IE">
+                                        <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="goBack" destination="9YA-R3-FsS" id="nOw-xd-SsJ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Bmi-il-nZR"/>
+                                    <barButtonItem image="arrow-big-02.png" id="Z8M-qC-Sh1">
+                                        <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="goForward" destination="9YA-R3-FsS" id="RMP-14-kxW"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Daily Announcements" image="speaker-electric.png" id="gMA-Hq-Mh2"/>
+                    <connections>
+                        <outlet property="webView" destination="9YA-R3-FsS" id="Bs6-Yu-quo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hNL-VK-qOL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3330" y="2710"/>
+        </scene>
+        <!--Notifications - Notifications-->
+        <scene sceneID="Ppm-Mv-Qbp">
+            <objects>
+                <viewController id="X9j-NT-R5V" customClass="Notifications" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7ZM-GP-bWl"/>
+                        <viewControllerLayoutGuide type="bottom" id="mF4-xy-8Ub"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1kw-A4-gfS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tW1-3i-Rpm">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem image="home.png" id="mGY-Dd-Dyq">
+                                        <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="zWj-PE-8Ci" kind="modal" modalTransitionStyle="crossDissolve" id="FrX-oj-745"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Notifications" image="text-left.png" id="O53-zu-RLc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mZY-eu-a90" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3340" y="1921"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="XZN-V1-edv">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="87y-y0-0rP" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="SWO-qV-sbR">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="E3M-8y-34m" kind="relationship" relationship="viewControllers" id="4KE-me-xdE"/>
+                        <segue destination="zTX-Cc-Sli" kind="relationship" relationship="viewControllers" id="2VW-OG-qcP"/>
+                        <segue destination="bkc-RT-dk2" kind="relationship" relationship="viewControllers" id="qoO-G8-cWI"/>
+                        <segue destination="Pwl-b9-71K" kind="relationship" relationship="viewControllers" id="tqd-YP-lVz"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="58a-DG-o5O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1414" y="2292"/>
+        </scene>
+        <!--Edmodo - edmodo-->
+        <scene sceneID="o1g-gy-Veu">
+            <objects>
+                <viewController id="bkc-RT-dk2" customClass="edmodo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7qn-z9-4Gt"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xpl-HM-uqz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zmm-Qa-xgv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PGT-VC-WSv">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem image="home.png" id="e9Q-F3-UAZ">
+                                        <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="zWj-PE-8Ci" kind="modal" modalTransitionStyle="crossDissolve" id="UCg-M8-xA4"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Ri4-f4-uwY"/>
+                                    <barButtonItem image="01-refresh.png" id="Es7-8m-uzI">
+                                        <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="reload" destination="q6c-ZB-7C4" id="pIW-qT-NMH"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="FR2-q8-e4c"/>
+                                    <barButtonItem image="arrow-big-01.png" id="bkg-7X-U7b">
+                                        <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="goBack" destination="q6c-ZB-7C4" id="vGc-59-mob"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="xH9-yB-RJ4"/>
+                                    <barButtonItem image="arrow-big-02.png" id="lOr-cz-klM">
+                                        <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="goForward" destination="q6c-ZB-7C4" id="TEb-Ng-QFX"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q6c-ZB-7C4">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="edmodo" image="id-card.png" id="hIK-DG-b3X"/>
+                    <connections>
+                        <outlet property="webView" destination="q6c-ZB-7C4" id="T9y-hQ-PL2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tyG-tK-Iob" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2233" y="2732"/>
+        </scene>
+        <!--Library - Library-->
+        <scene sceneID="m9P-gm-uaQ">
+            <objects>
+                <viewController id="Pwl-b9-71K" customClass="library" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Awz-lK-I5w"/>
+                        <viewControllerLayoutGuide type="bottom" id="OIv-4J-X60"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="m49-aH-Q0B">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uyV-4E-xIc">
+                                <rect key="frame" x="0.0" y="64" width="320" height="454"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZDR-9Q-oYD">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem image="home.png" id="WJg-mt-JBY">
+                                        <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="zWj-PE-8Ci" kind="modal" modalTransitionStyle="crossDissolve" id="RDg-VM-dwX"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="w7P-S1-YFA"/>
+                                    <barButtonItem image="01-refresh.png" id="RrX-px-opE">
+                                        <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="reload" destination="uyV-4E-xIc" id="P2j-SD-bEE"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="bBu-a3-pM9"/>
+                                    <barButtonItem image="arrow-big-01.png" id="y4M-nq-n8h">
+                                        <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="goBack" destination="uyV-4E-xIc" id="dgf-ff-SIQ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="dxa-hX-zmv"/>
+                                    <barButtonItem image="arrow-big-02.png" id="5xf-te-ob6">
+                                        <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="goForward" destination="uyV-4E-xIc" id="X9K-Z4-aZ0"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Library" image="bookmark.png" id="qR1-jI-0gr"/>
+                    <connections>
+                        <outlet property="webView" destination="uyV-4E-xIc" id="oPb-eR-rKh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nga-LS-7n8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2233" y="3437"/>
+        </scene>
+        <!--Parentportal - Parent Portal-->
+        <scene sceneID="vyy-5g-DNp">
+            <objects>
+                <viewController id="E3M-8y-34m" customClass="parentportal" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5BE-gG-tHS"/>
+                        <viewControllerLayoutGuide type="bottom" id="b4v-Ta-oMB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9g1-bW-EKM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4NC-xp-PTW">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem image="home.png" id="Y8n-Rt-mzt">
+                                        <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="zWj-PE-8Ci" kind="modal" modalTransitionStyle="crossDissolve" id="2gD-lK-zWZ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="3ga-Da-oSr"/>
+                                    <barButtonItem image="01-refresh.png" id="2tr-Aw-eaM">
+                                        <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="reload" destination="W8b-GI-JIg" id="a1X-iL-dU7"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="8xD-DZ-aMX"/>
+                                    <barButtonItem image="arrow-big-01.png" id="XcU-DR-zeq">
+                                        <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="goBack" destination="W8b-GI-JIg" id="jxH-yt-6RO"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="JJ5-gC-bOr"/>
+                                    <barButtonItem image="arrow-big-02.png" id="Rh2-R1-n1A">
+                                        <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="goForward" destination="W8b-GI-JIg" id="8Fj-oi-T5E"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W8b-GI-JIg">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Parent Portal" image="man.png" id="l1M-8C-FJW"/>
+                    <connections>
+                        <outlet property="webView" destination="W8b-GI-JIg" id="Ct4-qI-pl3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Djy-Td-nxB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2233" y="1441"/>
+        </scene>
+        <!--Castle learning - Castle Learning-->
+        <scene sceneID="LNW-LV-gKh">
+            <objects>
+                <viewController id="zTX-Cc-Sli" customClass="castle_learning" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UM6-A2-klq"/>
+                        <viewControllerLayoutGuide type="bottom" id="BJX-3R-doz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JYP-SB-167">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cyt-Ih-epp">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem image="home.png" id="oLn-ee-peR">
+                                        <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="zWj-PE-8Ci" kind="modal" modalTransitionStyle="crossDissolve" id="EgN-85-Xnu"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="8jX-Go-fka"/>
+                                    <barButtonItem image="01-refresh.png" id="dci-ef-euy">
+                                        <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="reload" destination="GAI-VU-DTH" id="mJY-3T-Umn"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="c7s-2U-ui1"/>
+                                    <barButtonItem image="arrow-big-01.png" id="ftc-8x-11e">
+                                        <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="goBack" destination="GAI-VU-DTH" id="fbe-qN-pvW"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="uxL-Ce-YXy"/>
+                                    <barButtonItem image="arrow-big-02.png" id="sva-ev-mCW">
+                                        <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="goForward" destination="GAI-VU-DTH" id="prm-EQ-TzU"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GAI-VU-DTH">
+                                <rect key="frame" x="0.0" y="64" width="325" height="484"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Castle Learning" image="tick.png" id="rLO-Lo-06k"/>
+                    <connections>
+                        <outlet property="webView" destination="GAI-VU-DTH" id="nTq-cP-llJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n3Z-5E-SXl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2233" y="2081"/>
+        </scene>
+        <!--District Calendar - District Calendar-->
+        <scene sceneID="hRA-uV-ZSf">
+            <objects>
+                <viewController id="ADc-YS-R2u" customClass="DistrictCalendar" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XV4-Sq-MuG"/>
+                        <viewControllerLayoutGuide type="bottom" id="Z7G-F7-Q9l"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iKG-Nk-tdZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="amK-CV-r4H">
+                                <rect key="frame" x="0.0" y="64" width="320" height="456"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7S9-ZV-ulx">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem image="home.png" id="vzS-E5-gCw">
+                                        <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="zWj-PE-8Ci" kind="modal" modalTransitionStyle="crossDissolve" id="5Af-ec-KJz"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="gBB-BL-9n4"/>
+                                    <barButtonItem image="01-refresh.png" id="Kdb-j2-zNN">
+                                        <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="reload" destination="amK-CV-r4H" id="xy3-o4-G5W"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="sUX-Fk-bFM"/>
+                                    <barButtonItem image="arrow-big-01.png" id="sqq-LF-BtQ">
+                                        <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="goBack" destination="amK-CV-r4H" id="ukT-Br-bew"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="dBq-ar-Aop"/>
+                                    <barButtonItem image="arrow-big-02.png" id="RGI-1I-Sgk">
+                                        <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="goForward" destination="amK-CV-r4H" id="KfH-TC-Vt0"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="District Calendar" image="calendar.png" id="Gap-wa-OnI"/>
+                    <connections>
+                        <outlet property="webView" destination="amK-CV-r4H" id="S5W-Ya-Cxh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="axV-El-SUX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-768" y="-2232"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="3O1-PL-BUH">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="wf3-7u-d9l" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Owy-wO-CjW">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ADc-YS-R2u" kind="relationship" relationship="viewControllers" id="4lY-4t-MEf"/>
+                        <segue destination="B4v-ef-bFj" kind="relationship" relationship="viewControllers" id="Xfg-3v-SbF"/>
+                        <segue destination="SD9-HP-562" kind="relationship" relationship="viewControllers" id="oJs-0P-nFJ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oAu-nt-rs8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1376" y="-1486"/>
+        </scene>
+        <!--Midterms Schedule - Midterm Schedule-->
+        <scene sceneID="t0f-vH-5Ye">
+            <objects>
+                <viewController id="B4v-ef-bFj" customClass="MidtermsSchedule" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0Hv-ya-C7d"/>
+                        <viewControllerLayoutGuide type="bottom" id="dcd-ZY-ilz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bEi-4K-5NA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x5t-8i-Fd1">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zE4-dt-AHy">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem image="home.png" id="tia-kw-i6g">
+                                        <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="zWj-PE-8Ci" kind="modal" modalTransitionStyle="crossDissolve" id="tvq-nZ-VX0"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="YvY-G3-SjG"/>
+                                    <barButtonItem image="01-refresh.png" id="Hb5-tt-F8o">
+                                        <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="reload" destination="x5t-8i-Fd1" id="4Yb-0E-TqA"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="WhK-IO-Zwj"/>
+                                    <barButtonItem image="arrow-big-01.png" id="qEy-8E-wtD">
+                                        <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="goBack" destination="x5t-8i-Fd1" id="0e8-gN-cmg"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="6hb-Ga-L8h"/>
+                                    <barButtonItem image="arrow-big-02.png" id="wNw-5c-auX">
+                                        <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="goForward" destination="x5t-8i-Fd1" id="Wsj-9G-XqK"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Midterm Schedule" image="text-list.png" id="KOF-bQ-Fl4"/>
+                    <connections>
+                        <outlet property="webView" destination="x5t-8i-Fd1" id="Gj1-zQ-h1t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YWL-tF-X93" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-778" y="-1486"/>
+        </scene>
+        <!--Regents Schedule - Regents Schedule-->
+        <scene sceneID="Rs1-ik-ciP">
+            <objects>
+                <viewController id="SD9-HP-562" customClass="RegentsSchedule" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QdW-tD-cL5"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vdh-RW-Dfd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iGW-vq-tEn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h0n-R3-MII">
+                                <rect key="frame" x="0.0" y="64" width="320" height="454"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mpu-8f-hb9">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem image="home.png" id="C5l-nM-kYC">
+                                        <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="zWj-PE-8Ci" kind="modal" modalTransitionStyle="crossDissolve" id="Rm8-nC-mdZ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="yHQ-B8-Wgz"/>
+                                    <barButtonItem image="01-refresh.png" id="rQ2-H1-teS">
+                                        <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="reload" destination="h0n-R3-MII" id="Hxp-md-aUC"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="dCr-iV-jhI"/>
+                                    <barButtonItem image="arrow-big-01.png" id="wZO-70-WiO">
+                                        <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="goBack" destination="h0n-R3-MII" id="zGt-em-IPx"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Bvr-iD-Ulx"/>
+                                    <barButtonItem image="arrow-big-02.png" id="B4B-7r-CyB">
+                                        <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="goForward" destination="h0n-R3-MII" id="5tQ-NI-KQ9"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Regents Schedule" image="text-list.png" id="ur3-hX-zkk"/>
+                    <connections>
+                        <outlet property="webView" destination="h0n-R3-MII" id="mgr-ep-mA6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HeR-4q-poH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-778" y="-776"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Zyc-G9-mHQ">
+            <objects>
+                <viewController id="QW4-QC-kiR" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xtt-nH-jIa"/>
+                        <viewControllerLayoutGuide type="bottom" id="AI7-n2-hTo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MlO-3q-fpd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UPZ-rp-bRI">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem image="home.png" id="nNB-rL-0O9">
+                                        <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="zWj-PE-8Ci" kind="modal" modalTransitionStyle="crossDissolve" id="uO9-oT-Aiz"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Item" id="euV-KZ-W6t"/>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="g4t-wY-Zjc">
+                                <rect key="frame" x="20" y="20" width="280" height="181"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Everything around you that you call life was made up by people that were no smarter than you, and you can change it, you can influence it, you can build your own things that other people can use.                                                                                     -Steve Jobs</string>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="~Software Engineer~" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJa-Sb-vTX">
+                                <rect key="frame" x="77" y="209" width="166" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alex Coventry" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWH-XD-hpO">
+                                <rect key="frame" x="104" y="238" width="112" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pFR-IE-60K">
+                                <rect key="frame" x="139" y="273" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d0z-mt-cn1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3457" y="-1945"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7vO-um-7jD">
+            <objects>
+                <viewController id="zWj-PE-8Ci" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ida-mT-Rlr"/>
+                        <viewControllerLayoutGuide type="bottom" id="9GQ-hH-ciL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TLY-tb-TlC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acw-AJ-qQ4">
+                                <rect key="frame" x="38" y="230" width="245" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="26"/>
+                                <state key="normal" title="Notification Center">
+                                    <color key="titleColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="oZ8-z4-Awq" kind="modal" modalTransitionStyle="crossDissolve" id="TLK-B3-sjw"/>
+                                </connections>
+                            </button>
+                            <button autoresizesSubviews="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6P-51-Aqa">
+                                <rect key="frame" x="9" y="184" width="304" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="26"/>
+                                <color key="tintColor" red="0.1218054772" green="0.15412536499999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Calendars and Schedules">
+                                    <color key="titleColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="wf3-7u-d9l" kind="modal" modalTransitionStyle="crossDissolve" id="fcX-JT-Cnh"/>
+                                </connections>
+                            </button>
+                            <button autoresizesSubviews="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPV-eR-yBo">
+                                <rect key="frame" x="55" y="272" width="211" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="26"/>
+                                <state key="normal" title="Teacher Directory">
+                                    <color key="titleColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="TdT-kV-c2v" kind="modal" id="vWN-Sg-9F1"/>
+                                </connections>
+                            </button>
+                            <button autoresizesSubviews="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JH6-o2-DBc">
+                                <rect key="frame" x="80" y="315" width="161" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="26"/>
+                                <state key="normal" title="Bell Schedule">
+                                    <color key="titleColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="i4w-Kb-vTW" kind="modal" modalTransitionStyle="crossDissolve" id="rsq-3w-0jd"/>
+                                </connections>
+                            </button>
+                            <button autoresizesSubviews="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojw-ei-Cag">
+                                <rect key="frame" x="96" y="357" width="129" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="26"/>
+                                <state key="normal" title="Bus Finder">
+                                    <color key="titleColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ets-Fc-YGz" kind="modal" modalTransitionStyle="crossDissolve" id="3NR-DK-Utv"/>
+                                </connections>
+                            </button>
+                            <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBI-8V-XkW">
+                                <rect key="frame" x="119" y="397" width="79" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="26"/>
+                                <state key="normal" title="Sports">
+                                    <color key="titleColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="xYm-wJ-jiX" kind="modal" modalTransitionStyle="crossDissolve" id="uGB-3l-d95"/>
+                                </connections>
+                            </button>
+                            <button autoresizesSubviews="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCO-w4-fWC">
+                                <rect key="frame" x="126" y="435" width="64" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="26"/>
+                                <state key="normal" title="Tools">
+                                    <color key="titleColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="87y-y0-0rP" kind="modal" modalTransitionStyle="crossDissolve" id="fIx-No-vlQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vi5-kz-wwr">
+                                <rect key="frame" x="20" y="20" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="QW4-QC-kiR" kind="modal" modalTransitionStyle="crossDissolve" id="OED-a9-piP"/>
+                                </connections>
+                            </button>
+                            <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Harbinger_Twitter_Icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="3XM-3r-sdz">
+                                <rect key="frame" x="76" y="20" width="157" height="156"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2H6-iU-64y"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wrt-Wm-l2D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-778" y="409"/>
+        </scene>
+        <!--Springsports - Spring-->
+        <scene sceneID="II8-oL-4Uf">
+            <objects>
+                <viewController id="xYm-wJ-jiX" customClass="springsports" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bEH-ah-XBN"/>
+                        <viewControllerLayoutGuide type="bottom" id="xYf-Uh-EGW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e1H-AF-mLX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w3y-dd-mBY">
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wp6-m1-qy2">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem image="home.png" id="KM7-v1-B81">
+                                        <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="zWj-PE-8Ci" kind="modal" modalTransitionStyle="crossDissolve" id="kmS-sr-4TJ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Si0-GX-Qi0"/>
+                                    <barButtonItem image="01-refresh.png" id="9af-7l-3Av">
+                                        <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="reload" destination="w3y-dd-mBY" id="SSp-dG-J7O"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="no5-kA-S6w"/>
+                                    <barButtonItem image="arrow-big-01.png" id="tjd-y8-JHu">
+                                        <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="goBack" destination="w3y-dd-mBY" id="DyR-Sp-fQd"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="9FH-hy-D7G"/>
+                                    <barButtonItem image="arrow-big-02.png" id="riz-8f-mSg">
+                                        <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="goForward" destination="w3y-dd-mBY" id="R86-tP-fQQ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Spring" image="flower-pot.png" id="qnE-Ar-WJk"/>
+                    <connections>
+                        <outlet property="webView" destination="w3y-dd-mBY" id="g3z-zo-rbL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m4X-4j-7vT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-944" y="2978"/>
+        </scene>
+        <!--Teacher Directory - Teacher Directory-->
+        <scene sceneID="J2E-e8-NSm">
+            <objects>
+                <tableViewController id="JKB-L0-d19" customClass="TeacherDirectory" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Z0G-Dp-mHK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="Cell" id="9Is-eP-XY1">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Is-eP-XY1" id="A58-wV-BgC">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="CAq-EZ-8e0" kind="push" identifier="PersonDetailSegue" id="WMN-9p-Aqs"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="JKB-L0-d19" id="7M9-oj-OhV"/>
+                            <outlet property="delegate" destination="JKB-L0-d19" id="qaW-47-gwT"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Teacher Directory" id="TeI-TB-oEs">
+                        <barButtonItem key="leftBarButtonItem" image="home.png" id="PM6-ZP-bni">
+                            <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="zWj-PE-8Ci" kind="modal" modalTransitionStyle="crossDissolve" id="7LQ-ZA-RSC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="XFv-NK-R1F" id="8Pa-6J-hCv"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VeC-q5-TPg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="XFv-NK-R1F">
+                    <connections>
+                        <outlet property="delegate" destination="JKB-L0-d19" id="M7Q-oX-OLf"/>
+                        <outlet property="searchContentsController" destination="JKB-L0-d19" id="k8C-TA-6Zh"/>
+                        <outlet property="searchResultsDataSource" destination="JKB-L0-d19" id="537-O6-Bbg"/>
+                        <outlet property="searchResultsDelegate" destination="JKB-L0-d19" id="uia-Ku-u0W"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="1146" y="-1443"/>
+        </scene>
+        <!--Person Detail Controller View Controller-->
+        <scene sceneID="ivg-7V-JDR">
+            <objects>
+                <viewController id="CAq-EZ-8e0" customClass="PersonDetailControllerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PkG-ZD-x5V"/>
+                        <viewControllerLayoutGuide type="bottom" id="sJV-2e-UBu"/>
+                    </layoutGuides>
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Mp0-ZK-nhs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBS-HL-TTX">
+                                <rect key="frame" x="20" y="266" width="280" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PAu-qc-4QX">
+                                <rect key="frame" x="0.0" y="366" width="320" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" button="YES" link="YES" staticText="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSl-5h-Vnc">
+                                <rect key="frame" x="20" y="316" width="280" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Harbinger_Twitter_Icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="8Gm-ra-a05">
+                                <rect key="frame" x="96" y="95" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="67N-YU-fPL"/>
+                    <connections>
+                        <outlet property="email" destination="PAu-qc-4QX" id="bMi-qN-Jwz"/>
+                        <outlet property="name" destination="HBS-HL-TTX" id="Pt5-vu-KiZ"/>
+                        <outlet property="position" destination="dSl-5h-Vnc" id="W7s-lw-YZk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="krR-UG-H4Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1575" y="-1443"/>
+        </scene>
+        <!--View Controller - Regular Day-->
+        <scene sceneID="Wwn-bM-XuV">
+            <objects>
+                <viewController id="8lK-vt-K1f" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="p6n-UV-OhL"/>
+                        <viewControllerLayoutGuide type="bottom" id="wh7-oh-W19"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zC2-Zl-1bg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="regulardaybellschedule.png" translatesAutoresizingMaskIntoConstraints="NO" id="aI5-g0-5Pv">
+                                <rect key="frame" x="0.0" y="64" width="320" height="454"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kyi-Xd-cAl">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem id="IgX-Ap-qKc">
+                                        <barButtonItem key="leftBarButtonItem" image="home.png" id="cD9-dy-BUW">
+                                            <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="zWj-PE-8Ci" kind="modal" modalTransitionStyle="crossDissolve" id="9s7-KZ-ajM"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Regular Day" image="11-clock.png" id="Sg4-gJ-Dqi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A1m-p5-vt5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2229" y="-57"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="2CR-Qe-oTZ">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="i4w-Kb-vTW" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="V5L-Fk-1nm">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="8lK-vt-K1f" kind="relationship" relationship="viewControllers" id="sjm-HK-OWk"/>
+                        <segue destination="FfR-wJ-wkA" kind="relationship" relationship="viewControllers" id="EG3-eX-gI4"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lCJ-fx-wNB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1713" y="288"/>
+        </scene>
+        <!--View Controller - 2 Hour Delay-->
+        <scene sceneID="4aS-Au-g36">
+            <objects>
+                <viewController id="FfR-wJ-wkA" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QeS-Rk-ME7"/>
+                        <viewControllerLayoutGuide type="bottom" id="soH-tO-qt5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ig4-fq-J8u">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="2hourdelaybellschedule.png" translatesAutoresizingMaskIntoConstraints="NO" id="TxQ-Ew-L3J">
+                                <rect key="frame" x="0.0" y="64" width="320" height="456"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fp9-eV-UnR">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem id="fus-rS-8Sp">
+                                        <barButtonItem key="leftBarButtonItem" image="home.png" id="Qj8-Mt-D7M">
+                                            <color key="tintColor" red="0.040075416230000001" green="0.42091966710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="zWj-PE-8Ci" kind="modal" modalTransitionStyle="crossDissolve" id="W0K-iM-nWS"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="2 Hour Delay" image="11-clock.png" id="4wd-Qw-NpT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YDV-R3-KoZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2229" y="640"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ous-iq-koL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TdT-kV-c2v" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jtc-UX-1sk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="JKB-L0-d19" kind="relationship" relationship="rootViewController" id="OXM-uJ-Wsd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vv3-C0-Nmt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="670" y="-1443"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="01-refresh.png" width="24" height="26"/>
+        <image name="11-clock.png" width="25" height="25"/>
+        <image name="2hourdelaybellschedule.png" width="237" height="405"/>
+        <image name="Harbinger_Twitter_Icon.png" width="500" height="474"/>
+        <image name="arrow-big-01.png" width="30" height="30"/>
+        <image name="arrow-big-02.png" width="30" height="30"/>
+        <image name="bookmark.png" width="30" height="30"/>
+        <image name="calendar.png" width="29" height="30"/>
+        <image name="flower-pot.png" width="30" height="30"/>
+        <image name="home.png" width="30" height="30"/>
+        <image name="id-card.png" width="30" height="30"/>
+        <image name="man.png" width="30" height="30"/>
+        <image name="regulardaybellschedule.png" width="227" height="412"/>
+        <image name="speaker-electric.png" width="30" height="30"/>
+        <image name="text-left.png" width="30" height="30"/>
+        <image name="text-list.png" width="30" height="30"/>
+        <image name="tick.png" width="30" height="30"/>
+    </resources>
+    <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="FrX-oj-745"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -10,4 +10,16 @@
 
 @implementation Person
 
+@synthesize name, position, email;
+
+-(id)initWithname:(NSString *)aName position:(NSString *)aPosition email:(NSString *)aEmail{
+    self= [super init];
+    if(self){
+        self.name = aName;
+        self.position = aPosition;
+        self.email = aEmail;
+    }
+    return self;
+}
+
 @end

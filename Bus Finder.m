@@ -13,20 +13,12 @@
 @end
 
 @implementation Bus_Finder
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+@synthesize webView;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    [webView loadRequest: [NSURLRequest requestWithURL: [NSURL URLWithString:@"http://www.harbingernews.net/buses/map"]]];
 }
 
 - (void)didReceiveMemoryWarning

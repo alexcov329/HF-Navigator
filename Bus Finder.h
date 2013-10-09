@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Bus_Finder : UIViewController
+@interface Bus_Finder : UIViewController{
+    IBOutlet UIWebView *webView;
+}
+
+@property (nonatomic, retain) IBOutlet UIWebView *webView;
 
 @end
+
+

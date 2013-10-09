@@ -10,4 +10,10 @@
 
 @interface Person : NSObject
 
+@property(strong)NSString *name;
+@property(strong)NSString *position;
+@property(strong)NSString *email;
+
+-(id)initWithname:(NSString *)aName position:(NSString *)aPosition email:(NSString *)aEmail;
+
 @end

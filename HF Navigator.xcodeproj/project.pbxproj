@@ -31,7 +31,7 @@
 		132C9DB617FFB46E00EB11D8 /* PersonDetailControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 132C9DB517FFB46E00EB11D8 /* PersonDetailControllerViewController.m */; };
 		133D2E3117F932F2002BD3A0 /* Main-iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 133D2E3017F932F2002BD3A0 /* Main-iPad.storyboard */; };
 		134A4E2B17F1F6E400D88AD2 /* parentportal.m in Sources */ = {isa = PBXBuildFile; fileRef = 134A4E2A17F1F6E400D88AD2 /* parentportal.m */; };
-		134A4E2E17F1F6FE00D88AD2 /* castle learning.m in Sources */ = {isa = PBXBuildFile; fileRef = 134A4E2D17F1F6FE00D88AD2 /* castle learning.m */; };
+		134A4E2E17F1F6FE00D88AD2 /* castlelearning.m in Sources */ = {isa = PBXBuildFile; fileRef = 134A4E2D17F1F6FE00D88AD2 /* castlelearning.m */; };
 		134A4E3117F1F73600D88AD2 /* edmodo.m in Sources */ = {isa = PBXBuildFile; fileRef = 134A4E3017F1F73600D88AD2 /* edmodo.m */; };
 		136D77CD17F1C4900074FB40 /* HF Navigator v3 120.png in Resources */ = {isa = PBXBuildFile; fileRef = 136D77CC17F1C4900074FB40 /* HF Navigator v3 120.png */; };
 		136D77D017F1D91B0074FB40 /* 2hourdelaybellschedule.png in Resources */ = {isa = PBXBuildFile; fileRef = 136D77CE17F1D91B0074FB40 /* 2hourdelaybellschedule.png */; };
@@ -115,8 +115,8 @@
 		133D2E3017F932F2002BD3A0 /* Main-iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Main-iPad.storyboard"; path = "../Main-iPad.storyboard"; sourceTree = "<group>"; };
 		134A4E2917F1F6E400D88AD2 /* parentportal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parentportal.h; sourceTree = "<group>"; };
 		134A4E2A17F1F6E400D88AD2 /* parentportal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = parentportal.m; sourceTree = "<group>"; };
-		134A4E2C17F1F6FE00D88AD2 /* castle learning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "castle learning.h"; sourceTree = "<group>"; };
-		134A4E2D17F1F6FE00D88AD2 /* castle learning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "castle learning.m"; sourceTree = "<group>"; };
+		134A4E2C17F1F6FE00D88AD2 /* castlelearning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = castlelearning.h; sourceTree = "<group>"; };
+		134A4E2D17F1F6FE00D88AD2 /* castlelearning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = castlelearning.m; sourceTree = "<group>"; };
 		134A4E2F17F1F73600D88AD2 /* edmodo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = edmodo.h; sourceTree = "<group>"; };
 		134A4E3017F1F73600D88AD2 /* edmodo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = edmodo.m; sourceTree = "<group>"; };
 		136D77CC17F1C4900074FB40 /* HF Navigator v3 120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HF Navigator v3 120.png"; sourceTree = "<group>"; };
@@ -285,8 +285,8 @@
 				13E8B2B417F27A8A00692676 /* library.m */,
 				134A4E2F17F1F73600D88AD2 /* edmodo.h */,
 				134A4E3017F1F73600D88AD2 /* edmodo.m */,
-				134A4E2C17F1F6FE00D88AD2 /* castle learning.h */,
-				134A4E2D17F1F6FE00D88AD2 /* castle learning.m */,
+				134A4E2C17F1F6FE00D88AD2 /* castlelearning.h */,
+				134A4E2D17F1F6FE00D88AD2 /* castlelearning.m */,
 				134A4E2917F1F6E400D88AD2 /* parentportal.h */,
 				134A4E2A17F1F6E400D88AD2 /* parentportal.m */,
 				13909B0617F0FB5F00FAEF9C /* navigatorAppDelegate.h */,
@@ -477,7 +477,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				134A4E2E17F1F6FE00D88AD2 /* castle learning.m in Sources */,
+				134A4E2E17F1F6FE00D88AD2 /* castlelearning.m in Sources */,
 				13E79FAC17F68D9A00B5612E /* Notifications.m in Sources */,
 				132C9DAD17FF5E1500EB11D8 /* TeacherDirectory.m in Sources */,
 				13756BE41806214D0006D759 /* BusFinder.m in Sources */,

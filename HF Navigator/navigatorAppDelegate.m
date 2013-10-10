@@ -17,11 +17,7 @@
     [Parse setApplicationId:@"C9vun7KPxdDKBsVcuzwxlyRDEC83hekR9O6yeX3e"
                   clientKey:@"OoIEedGp2uIu0yWImnlqDTNunEPLaf0O6jTe4IgR"];
     
-    PFQueryTableViewController *controller = [[PFQueryTableViewController alloc] initWithClassName:@"ToDo"];
-    
-    self.window.rootViewController= controller;
-    [self.window makeKeyAndVisible];
-    
+        
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     // Register for push notifications
     [application registerForRemoteNotificationTypes:

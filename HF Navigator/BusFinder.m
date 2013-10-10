@@ -28,6 +28,8 @@
 {
     [super viewDidLoad];
 	[webView loadRequest: [NSURLRequest requestWithURL: [NSURL URLWithString:@"http://www.harbingernews.net/buses/map"]]];
+    webView.scalesPageToFit=YES;
+
 }
 
 - (void)didReceiveMemoryWarning

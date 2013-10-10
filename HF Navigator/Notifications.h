@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Notifications : UIViewController<UITableViewDataSource, UITableViewDelegate, NSURLConnectionDataDelegate>
+@interface Notifications : UIViewController{
+    IBOutlet UIWebView *webView;
+}
+
+@property (nonatomic, retain) IBOutlet UIWebView *webView;
+
+
 
 @end

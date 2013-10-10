@@ -1,20 +1,19 @@
 //
-//  CastleLearning.m
+//  Castle-Learning.m
 //  HF Navigator
 //
-//  Created by Harborfields Mobile Computing Club on 10/9/13.
+//  Created by Harborfields Mobile Computing Club on 10/10/13.
 //  Copyright (c) 2013 Coventry Developments. All rights reserved.
 //
 
-#import "CastleLearning.h"
+#import "Castle-Learning.h"
 
-@interface CastleLearning ()
+@interface Castle_Learning ()
 
 @end
 
-@implementation CastleLearning
+@implementation Castle_Learning
 @synthesize webView;
-
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,7 +28,6 @@
 {
     [super viewDidLoad];
 	[webView loadRequest: [NSURLRequest requestWithURL: [NSURL URLWithString:@"https://www.castlelearning.com/mobile/"]]];
-
 }
 
 - (void)didReceiveMemoryWarning

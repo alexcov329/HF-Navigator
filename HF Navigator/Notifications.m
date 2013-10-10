@@ -13,7 +13,7 @@
 @end
 
 @implementation Notifications
-
+@synthesize webView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,7 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
+	[webView loadRequest: [NSURLRequest requestWithURL: [NSURL URLWithString:@"https://docs.google.com/document/d/1NAlcQ5Im3Qslo_c7RJzEt2pJd7lp0k9FBhO6qw6fBzc/pub"]]];
 }
 
 - (void)didReceiveMemoryWarning

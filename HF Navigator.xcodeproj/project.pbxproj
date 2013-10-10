@@ -37,7 +37,6 @@
 		136D77D117F1D91B0074FB40 /* regulardaybellschedule.png in Resources */ = {isa = PBXBuildFile; fileRef = 136D77CF17F1D91B0074FB40 /* regulardaybellschedule.png */; };
 		13756BE41806214D0006D759 /* BusFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756BE31806214D0006D759 /* BusFinder.m */; };
 		13756BE7180622350006D759 /* DailyAnnouncements.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756BE6180622350006D759 /* DailyAnnouncements.m */; };
-		13756BEA1806249E0006D759 /* CastleLearning.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756BE91806249E0006D759 /* CastleLearning.m */; };
 		1375A62617F52ABE007331FB /* speaker-electric.png in Resources */ = {isa = PBXBuildFile; fileRef = 1375A62417F52ABE007331FB /* speaker-electric.png */; };
 		1375A62717F52ABE007331FB /* text-left.png in Resources */ = {isa = PBXBuildFile; fileRef = 1375A62517F52ABE007331FB /* text-left.png */; };
 		13909AF817F0FB5F00FAEF9C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13909AF717F0FB5F00FAEF9C /* Foundation.framework */; };
@@ -74,6 +73,7 @@
 		13E8B2DD17F39AD700692676 /* RegentsSchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E8B2DC17F39AD700692676 /* RegentsSchedule.m */; };
 		13E8B2E017F39CA500692676 /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E8B2DE17F39CA500692676 /* calendar.png */; };
 		13E8B2E117F39CA500692676 /* text-list.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E8B2DF17F39CA500692676 /* text-list.png */; };
+		13F4F71B18070DBD0089F21C /* Castle-Learning.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F4F71A18070DBD0089F21C /* Castle-Learning.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,8 +124,6 @@
 		13756BE31806214D0006D759 /* BusFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusFinder.m; sourceTree = "<group>"; };
 		13756BE5180622350006D759 /* DailyAnnouncements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DailyAnnouncements.h; path = ../DailyAnnouncements.h; sourceTree = "<group>"; };
 		13756BE6180622350006D759 /* DailyAnnouncements.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DailyAnnouncements.m; path = ../DailyAnnouncements.m; sourceTree = "<group>"; };
-		13756BE81806249E0006D759 /* CastleLearning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CastleLearning.h; sourceTree = "<group>"; };
-		13756BE91806249E0006D759 /* CastleLearning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CastleLearning.m; sourceTree = "<group>"; };
 		1375A62417F52ABE007331FB /* speaker-electric.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "speaker-electric.png"; path = "images/speaker-electric.png"; sourceTree = "<group>"; };
 		1375A62517F52ABE007331FB /* text-left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "text-left.png"; path = "images/text-left.png"; sourceTree = "<group>"; };
 		13909AF417F0FB5F00FAEF9C /* HF Navigator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HF Navigator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,6 +172,8 @@
 		13E8B2DC17F39AD700692676 /* RegentsSchedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegentsSchedule.m; sourceTree = "<group>"; };
 		13E8B2DE17F39CA500692676 /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = calendar.png; path = images/calendar.png; sourceTree = "<group>"; };
 		13E8B2DF17F39CA500692676 /* text-list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "text-list.png"; path = "images/text-list.png"; sourceTree = "<group>"; };
+		13F4F71918070DBD0089F21C /* Castle-Learning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Castle-Learning.h"; sourceTree = "<group>"; };
+		13F4F71A18070DBD0089F21C /* Castle-Learning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Castle-Learning.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -285,8 +285,8 @@
 				13E8B2B417F27A8A00692676 /* library.m */,
 				134A4E2F17F1F73600D88AD2 /* edmodo.h */,
 				134A4E3017F1F73600D88AD2 /* edmodo.m */,
-				13756BE81806249E0006D759 /* CastleLearning.h */,
-				13756BE91806249E0006D759 /* CastleLearning.m */,
+				13F4F71918070DBD0089F21C /* Castle-Learning.h */,
+				13F4F71A18070DBD0089F21C /* Castle-Learning.m */,
 				134A4E2917F1F6E400D88AD2 /* parentportal.h */,
 				134A4E2A17F1F6E400D88AD2 /* parentportal.m */,
 				13909B0617F0FB5F00FAEF9C /* navigatorAppDelegate.h */,
@@ -478,7 +478,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				13E79FAC17F68D9A00B5612E /* Notifications.m in Sources */,
-				13756BEA1806249E0006D759 /* CastleLearning.m in Sources */,
 				132C9DAD17FF5E1500EB11D8 /* TeacherDirectory.m in Sources */,
 				13756BE41806214D0006D759 /* BusFinder.m in Sources */,
 				13E8B2DD17F39AD700692676 /* RegentsSchedule.m in Sources */,
@@ -491,6 +490,7 @@
 				13E8B2D417F36D2700692676 /* springsports.m in Sources */,
 				13909B0817F0FB5F00FAEF9C /* navigatorAppDelegate.m in Sources */,
 				13756BE7180622350006D759 /* DailyAnnouncements.m in Sources */,
+				13F4F71B18070DBD0089F21C /* Castle-Learning.m in Sources */,
 				13909B0417F0FB5F00FAEF9C /* main.m in Sources */,
 				13E8B2B517F27A8A00692676 /* library.m in Sources */,
 				13E8B2D717F39A7500692676 /* DistrictCalendar.m in Sources */,

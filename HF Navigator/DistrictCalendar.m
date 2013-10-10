@@ -29,6 +29,7 @@
 {
     [super viewDidLoad];
     [webView loadRequest: [NSURLRequest requestWithURL: [NSURL URLWithString:@"http://www.harborfieldscsd.net/Assets/District_Documents/1314_adopted_calendar_021413.pdf"]]];
+    webView.scalesPageToFit=YES;
 
 }
 

@@ -28,7 +28,7 @@
 {
     [super viewDidLoad];
     [webView loadRequest: [NSURLRequest requestWithURL: [NSURL URLWithString:@"https://docs.google.com/document/d/14Y38BZxoa7wGG17Gojk3iPOUzadFBFykGKKrlD1Aor0/pub"]]];
-
+    webView.scalesPageToFit=YES;
 }
 
 - (void)didReceiveMemoryWarning
